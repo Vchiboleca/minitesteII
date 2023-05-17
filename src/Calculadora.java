@@ -200,7 +200,11 @@ public class Calculadora implements ActionListener{
                     resultado = num1 * num2;
                     break;
                 case '/':
-                    resultado = num1 / num2;
+                    if (num2 != 0) {
+                        resultado = num1 / num2;
+                    } else {
+                        JOptionPane.showMessageDialog(null, "Divisao por zero nao e possivel");
+                    }
                     break;
                 case '%':
                     resultado = num1 % num2;
